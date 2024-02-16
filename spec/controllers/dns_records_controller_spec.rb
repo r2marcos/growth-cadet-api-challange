@@ -20,7 +20,7 @@ RSpec.describe Api::V1::DnsRecordsController, type: :controller do
 
       let(:payload1) do
         {
-          dns_records: {
+          dns_record: {
             ip: ip1,
             hostnames_attributes: [
               {
@@ -42,7 +42,7 @@ RSpec.describe Api::V1::DnsRecordsController, type: :controller do
 
       let(:payload2) do
         {
-          dns_records: {
+          dns_record: {
             ip: ip2,
             hostnames_attributes: [
               {
@@ -55,7 +55,7 @@ RSpec.describe Api::V1::DnsRecordsController, type: :controller do
 
       let(:payload3) do
         {
-          dns_records: {
+          dns_record: {
             ip: ip3,
             hostnames_attributes: [
               {
@@ -74,7 +74,7 @@ RSpec.describe Api::V1::DnsRecordsController, type: :controller do
 
       let(:payload4) do
         {
-          dns_records: {
+          dns_record: {
             ip: ip4,
             hostnames_attributes: [
               {
@@ -96,7 +96,7 @@ RSpec.describe Api::V1::DnsRecordsController, type: :controller do
 
       let(:payload5) do
         {
-          dns_records: {
+          dns_record: {
             ip: ip5,
             hostnames_attributes: [
               {

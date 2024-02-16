@@ -8,7 +8,17 @@ module Api
 
       # POST /dns_records
       def create
-        # TODO: Implement this action
+        result = ::DnsRecords::CreatorService.call(attributes: dns_record_params)
+
+        render json: { id: result.id }, status: :created
+      rescue ActiveRecord::RecordInvalid => e
+        render json: { errors: e.record.errors }, status: :unprocessable_entity
+      end
+
+      private
+
+      def dns_record_params
+        params.require(:dns_record).permit(:ip, hostnames_attributes: [:hostname])
       end
     end
   end
